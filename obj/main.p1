@@ -3103,7 +3103,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "20 Inc/main.h
 [p x FOSC=INTOSC ]
 "21
-[p x WDTE=OFF ]
+[p x WDTE=ON ]
 "22
 [p x PWRTE=ON ]
 "23

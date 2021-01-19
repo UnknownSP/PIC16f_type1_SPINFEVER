@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcdzrNdfw.obj
+$/tmp/xc7iDF05L.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 A A 2 2
 config CONFIG 4 8007 8007 2 2
@@ -122,23 +122,23 @@ STRING 11F-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $bin/target.obj
-C cinit CODE >1201:/tmp/xclMN676z.as
-C cinit CODE >1204:/tmp/xclMN676z.as
-C cinit CODE >1249:/tmp/xclMN676z.as
-D cinit CODE >1250:/tmp/xclMN676z.as
-E cinit CODE >1251:/tmp/xclMN676z.as
-F cinit CODE >1252:/tmp/xclMN676z.as
-10 cinit CODE >1253:/tmp/xclMN676z.as
-11 cinit CODE >1257:/tmp/xclMN676z.as
-12 cinit CODE >1258:/tmp/xclMN676z.as
-13 cinit CODE >1259:/tmp/xclMN676z.as
-14 cinit CODE >1260:/tmp/xclMN676z.as
-15 cinit CODE >1261:/tmp/xclMN676z.as
-16 cinit CODE >1262:/tmp/xclMN676z.as
-18 cinit CODE >1268:/tmp/xclMN676z.as
-18 cinit CODE >1270:/tmp/xclMN676z.as
-19 cinit CODE >1271:/tmp/xclMN676z.as
-1A cinit CODE >1272:/tmp/xclMN676z.as
+C cinit CODE >1201:/tmp/xcCXTUWDh.as
+C cinit CODE >1204:/tmp/xcCXTUWDh.as
+C cinit CODE >1249:/tmp/xcCXTUWDh.as
+D cinit CODE >1250:/tmp/xcCXTUWDh.as
+E cinit CODE >1251:/tmp/xcCXTUWDh.as
+F cinit CODE >1252:/tmp/xcCXTUWDh.as
+10 cinit CODE >1253:/tmp/xcCXTUWDh.as
+11 cinit CODE >1257:/tmp/xcCXTUWDh.as
+12 cinit CODE >1258:/tmp/xcCXTUWDh.as
+13 cinit CODE >1259:/tmp/xcCXTUWDh.as
+14 cinit CODE >1260:/tmp/xcCXTUWDh.as
+15 cinit CODE >1261:/tmp/xcCXTUWDh.as
+16 cinit CODE >1262:/tmp/xcCXTUWDh.as
+18 cinit CODE >1268:/tmp/xcCXTUWDh.as
+18 cinit CODE >1270:/tmp/xcCXTUWDh.as
+19 cinit CODE >1271:/tmp/xcCXTUWDh.as
+1A cinit CODE >1272:/tmp/xcCXTUWDh.as
 4 intentry CODE >101:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 6 intentry CODE >102:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 8 intentry CODE >103:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
@@ -265,14 +265,14 @@ F1 text1 CODE >99:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 7D maintext CODE >59:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 7E maintext CODE >60:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 7F maintext CODE >61:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-119 clrtext CODE >1238:/tmp/xclMN676z.as
-119 clrtext CODE >1239:/tmp/xclMN676z.as
-11A clrtext CODE >1240:/tmp/xclMN676z.as
-11A clrtext CODE >1241:/tmp/xclMN676z.as
-11B clrtext CODE >1242:/tmp/xclMN676z.as
-11C clrtext CODE >1243:/tmp/xclMN676z.as
-11D clrtext CODE >1244:/tmp/xclMN676z.as
-11E clrtext CODE >1245:/tmp/xclMN676z.as
+119 clrtext CODE >1238:/tmp/xcCXTUWDh.as
+119 clrtext CODE >1239:/tmp/xcCXTUWDh.as
+11A clrtext CODE >1240:/tmp/xcCXTUWDh.as
+11A clrtext CODE >1241:/tmp/xcCXTUWDh.as
+11B clrtext CODE >1242:/tmp/xcCXTUWDh.as
+11C clrtext CODE >1243:/tmp/xcCXTUWDh.as
+11D clrtext CODE >1244:/tmp/xcCXTUWDh.as
+11E clrtext CODE >1245:/tmp/xcCXTUWDh.as
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -298,23 +298,23 @@ _PEIE 5E 0 ABS 0 - bin/target.obj
 _Rdtp 72 0 COMMON 1 bssCOMMON bin/target.obj
 _Sdtp 73 0 COMMON 1 bssCOMMON bin/target.obj
 _WPUB 20D 0 ABS 0 - bin/target.obj
-___sp 0 0 STACK 2 stack /tmp/xcdzrNdfw.obj
+___sp 0 0 STACK 2 stack /tmp/xc7iDF05L.obj
 _init 19E 0 CODE 0 text1 bin/target.obj
 _main 38 0 CODE 0 maintext bin/target.obj
 btemp 7E 0 ABS 0 - bin/target.obj
-start 14 0 CODE 0 init /tmp/xcdzrNdfw.obj
+start 14 0 CODE 0 init /tmp/xc7iDF05L.obj
 __size_of_HAND 0 0 ABS 0 - bin/target.obj
 __size_of_init 0 0 ABS 0 - bin/target.obj
 __size_of_main 0 0 ABS 0 - bin/target.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_I2C_init 0 0 ABS 0 - bin/target.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcdzrNdfw.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xc7iDF05L.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - bin/target.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -325,8 +325,8 @@ _I2C_init 1E4 0 CODE 0 text2 bin/target.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of_I2C_init 210 0 CODE 0 text2 bin/target.obj
 _rcv_data 28 0 BANK0 1 bssBANK0 bin/target.obj
-___stackhi 23EF 0 ABS 0 - /tmp/xcdzrNdfw.obj
-___stacklo 2015 0 ABS 0 - /tmp/xcdzrNdfw.obj
+___stackhi 23EF 0 ABS 0 - /tmp/xc7iDF05L.obj
+___stacklo 2015 0 ABS 0 - /tmp/xc7iDF05L.obj
 main@com_flg 30 0 BANK0 1 cstackBANK0 bin/target.obj
 start_initialization 18 0 CODE 0 cinit bin/target.obj
 _snd_data 20 0 BANK0 1 bssBANK0 bin/target.obj
@@ -339,7 +339,7 @@ _SSPBUF 211 0 ABS 0 - bin/target.obj
 _SSPMSK 213 0 ABS 0 - bin/target.obj
 _rcv_flg 74 0 COMMON 1 bssCOMMON bin/target.obj
 _WDTCON 97 0 ABS 0 - bin/target.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcdzrNdfw.obj
+___int_sp 0 0 STACK 2 stack /tmp/xc7iDF05L.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -495,7 +495,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _Slave_Interrupt 102 0 CODE 0 text5 bin/target.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcdzrNdfw.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xc7iDF05L.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 I2C_init@add 77 0 COMMON 1 cstackCOMMON bin/target.obj
 __end_of_I2C_ReceiveCheck 232 0 CODE 0 text3 bin/target.obj

@@ -4907,7 +4907,7 @@ extern __bank0 __bit __timeout;
 
 # 20 "Inc/main.h"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
+#pragma config WDTE = ON
 #pragma config PWRTE = ON
 #pragma config MCLRE = ON
 #pragma config CP = OFF
