@@ -30,6 +30,8 @@ void main(void) {
         }else if(B1_S_2 == 1 && b1_flag){
             B1_LED = 0;
             B1_OUT = 0;
+            B1_LED = 0;
+            B1_OUT = 0;
             b1_flag = false;
         }
         if(B2_S_1 == 0 && !b2_flag){
@@ -39,6 +41,8 @@ void main(void) {
         }else if(B2_S_2 == 1 && b2_flag){
             B2_LED = 0;
             B2_OUT = 0;
+            B2_LED = 0;
+            B2_OUT = 0;
             b2_flag = false;
         }
         if(B3_S_1 == 0 && !b3_flag){
@@ -46,6 +50,8 @@ void main(void) {
             B3_OUT = 1;
             b3_flag = true;
         }else if(B3_S_2 == 1 && b3_flag){
+            B3_LED = 0;
+            B3_OUT = 0;
             B3_LED = 0;
             B3_OUT = 0;
             b3_flag = false;
@@ -58,6 +64,7 @@ void main(void) {
             B4_LED = 0;
             B4_OUT = 0;
             B4_LED = 0;
+            B4_OUT = 0;
             b4_flag = false;
         }
     }
