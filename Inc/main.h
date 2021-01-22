@@ -39,6 +39,24 @@ extern "C" {
 #include <pic16f1938.h>
 #include "I2C.h"
 
+typedef enum{
+  STANDBY = 0,
+  IN_GAME = 1,
+} Game_mode;
+
+typedef enum{
+  LED = 0,
+  OUT = 1,
+} Output_t;
+
+typedef enum{
+  S_1 = 0,
+  S_2 = 1,
+} Input_t;
+
+void output(Output_t type, int num, int output);
+int input(Input_t type, int num);
+
 #define B1_S_1 RA1
 #define B1_S_2 RA0
 #define B1_OUT RB5

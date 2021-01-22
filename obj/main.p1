@@ -1,42 +1,23 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"5 Src/main.c
+"18 Src/main.c
+[c E2567 0 1 .. ]
+[n E2567 . STANDBY IN_GAME  ]
+"5
 [v _init `(v ~T0 @X0 0 ef ]
 "69 Inc/I2C.h
 [v _I2C_ReceiveCheck `(uc ~T0 @X0 0 ef ]
-"8154 /Users/UnknownSP/microchip/xc8/v2.31/pic/include/proc/pic16f1938.h
-[v _RA1 `Vb ~T0 @X0 0 e@97 ]
-"8214
-[v _RC5 `Vb ~T0 @X0 0 e@117 ]
-"8190
-[v _RB5 `Vb ~T0 @X0 0 e@109 ]
-"8151
-[v _RA0 `Vb ~T0 @X0 0 e@96 ]
-"8160
-[v _RA3 `Vb ~T0 @X0 0 e@99 ]
-"8217
-[v _RC6 `Vb ~T0 @X0 0 e@118 ]
-"8187
-[v _RB4 `Vb ~T0 @X0 0 e@108 ]
-"8157
-[v _RA2 `Vb ~T0 @X0 0 e@98 ]
-"8166
-[v _RA5 `Vb ~T0 @X0 0 e@101 ]
-"8220
-[v _RC7 `Vb ~T0 @X0 0 e@119 ]
-"8184
-[v _RB3 `Vb ~T0 @X0 0 e@107 ]
-"8163
-[v _RA4 `Vb ~T0 @X0 0 e@100 ]
-"8169
-[v _RA6 `Vb ~T0 @X0 0 e@102 ]
-"8175
-[v _RB0 `Vb ~T0 @X0 0 e@104 ]
-"8181
-[v _RB2 `Vb ~T0 @X0 0 e@106 ]
-"8172
-[v _RA7 `Vb ~T0 @X0 0 e@103 ]
-"1852
+"73 Src/main.c
+[c E2575 0 1 .. ]
+[n E2575 . S_1 S_2  ]
+"58 Inc/main.h
+[v _input `(i ~T0 @X0 0 ef2`E2575`i ]
+"74 Src/main.c
+[c E2571 0 1 .. ]
+[n E2571 . LED OUT  ]
+"57 Inc/main.h
+[v _output `(v ~T0 @X0 0 ef3`E2571`i`i ]
+"1852 /Users/UnknownSP/microchip/xc8/v2.31/pic/include/proc/pic16f1938.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
 "3078
 [v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
@@ -60,7 +41,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _WDTCON `Vuc ~T0 @X0 0 e@151 ]
 "85 Inc/I2C.h
 [v _I2C_init `(v ~T0 @X0 0 ef1`uc ]
-"63
+"8214 /Users/UnknownSP/microchip/xc8/v2.31/pic/include/proc/pic16f1938.h
+[v _RC5 `Vb ~T0 @X0 0 e@117 ]
+"8217
+[v _RC6 `Vb ~T0 @X0 0 e@118 ]
+"8220
+[v _RC7 `Vb ~T0 @X0 0 e@119 ]
+"8175
+[v _RB0 `Vb ~T0 @X0 0 e@104 ]
+"8190
+[v _RB5 `Vb ~T0 @X0 0 e@109 ]
+"8187
+[v _RB4 `Vb ~T0 @X0 0 e@108 ]
+"8184
+[v _RB3 `Vb ~T0 @X0 0 e@107 ]
+"8181
+[v _RB2 `Vb ~T0 @X0 0 e@106 ]
+"8154
+[v _RA1 `Vb ~T0 @X0 0 e@97 ]
+"8160
+[v _RA3 `Vb ~T0 @X0 0 e@99 ]
+"8166
+[v _RA5 `Vb ~T0 @X0 0 e@101 ]
+"8169
+[v _RA6 `Vb ~T0 @X0 0 e@102 ]
+"8151
+[v _RA0 `Vb ~T0 @X0 0 e@96 ]
+"8157
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
+"8163
+[v _RA4 `Vb ~T0 @X0 0 e@100 ]
+"8172
+[v _RA7 `Vb ~T0 @X0 0 e@103 ]
+"63 Inc/I2C.h
 [v _Slave_Interrupt `(v ~T0 @X0 0 ef ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
@@ -3141,6 +3154,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;I2C.h: 63: void Slave_Interrupt( void );
 [; ;I2C.h: 69: uint8_t I2C_ReceiveCheck() ;
 [; ;I2C.h: 85: void I2C_init(uint8_t add);
+[; ;main.h: 42: typedef enum{
+[; ;main.h: 43: STANDBY = 0,
+[; ;main.h: 44: IN_GAME = 1,
+[; ;main.h: 45: } Game_mode;
+[; ;main.h: 47: typedef enum{
+[; ;main.h: 48: LED = 0,
+[; ;main.h: 49: OUT = 1,
+[; ;main.h: 50: } Output_t;
+[; ;main.h: 52: typedef enum{
+[; ;main.h: 53: S_1 = 0,
+[; ;main.h: 54: S_2 = 1,
+[; ;main.h: 55: } Input_t;
+[; ;main.h: 57: void output(Output_t type, int num, int output);
+[; ;main.h: 58: int input(Input_t type, int num);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;main.c: 5: void init(void);
 [v $root$_main `(v ~T0 @X0 0 e ]
@@ -3154,300 +3181,786 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _com_flg `uc ~T0 @X0 1 a ]
 [; ;main.c: 8: uint8_t com_flg = 0;
 [e = _com_flg -> -> 0 `i `uc ]
+[v F2593 `uc ~T0 @X0 -> 4 `i s ]
+[i F2593
+:U ..
 "9
-[v _b1_flag `uc ~T0 @X0 1 a ]
-[; ;main.c: 9: bool b1_flag = 0;
-[e = _b1_flag -> -> 0 `i `uc ]
-"10
-[v _b2_flag `uc ~T0 @X0 1 a ]
-[; ;main.c: 10: bool b2_flag = 0;
-[e = _b2_flag -> -> 0 `i `uc ]
-"11
-[v _b3_flag `uc ~T0 @X0 1 a ]
-[; ;main.c: 11: bool b3_flag = 0;
-[e = _b3_flag -> -> 0 `i `uc ]
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+[v _bumper_flag `uc ~T0 @X0 -> 4 `i a ]
+[; ;main.c: 9: bool bumper_flag[4] = {0,0,0,0};
+[e = _bumper_flag F2593 ]
+[v F2595 `uc ~T0 @X0 -> 3 `i t ]
+[v F2596 `F2595 ~T0 @X0 -> 4 `i s ]
+[i F2596
+:U ..
+:U ..
 "12
-[v _b4_flag `uc ~T0 @X0 1 a ]
-[; ;main.c: 12: bool b4_flag = 0;
-[e = _b4_flag -> -> 0 `i `uc ]
-[; ;main.c: 14: init();
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"13
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
 "14
-[e ( _init ..  ]
-[; ;main.c: 16: while(1){
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+"15
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+..
+..
+]
+"11
+[v _bumper_enable `F2595 ~T0 @X0 -> 4 `i a ]
+[; ;main.c: 11: bool bumper_enable[4][3] = {
+[; ;main.c: 12: {0,0,0},
+[; ;main.c: 13: {0,0,0},
+[; ;main.c: 14: {0,0,0},
+[; ;main.c: 15: {1,1,1},
+[; ;main.c: 16: };
 "16
+[e = _bumper_enable F2596 ]
+"18
+[v _game_mode `E2567 ~T0 @X0 1 a ]
+[; ;main.c: 18: Game_mode game_mode = 0;
+[e = _game_mode -> -> 0 `i `E2567 ]
+"19
+[v _recet_read_bit `uc ~T0 @X0 1 a ]
+[; ;main.c: 19: uint8_t recet_read_bit = 0;
+[e = _recet_read_bit -> -> 0 `i `uc ]
+"20
+[v _bumper_hit `uc ~T0 @X0 1 a ]
+[; ;main.c: 20: uint8_t bumper_hit = 0;
+[e = _bumper_hit -> -> 0 `i `uc ]
+"22
+[v _i `i ~T0 @X0 1 a ]
+[; ;main.c: 22: int i;
+[; ;main.c: 24: init();
+"24
+[e ( _init ..  ]
+[; ;main.c: 26: while(1){
+"26
 [e :U 353 ]
 {
-[; ;main.c: 18: if(I2C_ReceiveCheck()){
-"18
+[; ;main.c: 28: if(I2C_ReceiveCheck()){
+"28
 [e $ ! != -> ( _I2C_ReceiveCheck ..  `i -> -> -> 0 `i `uc `i 355  ]
 {
-[; ;main.c: 19: if (com_flg == 0) com_flg = 1;
-"19
+[; ;main.c: 29: if (com_flg == 0) com_flg = 1;
+"29
 [e $ ! == -> _com_flg `i -> 0 `i 356  ]
 [e = _com_flg -> -> 1 `i `uc ]
 [e :U 356 ]
-[; ;main.c: 20: asm("clrwdt");
-"20
-[; <" clrwdt ;# ">
-"21
-}
-[; ;main.c: 21: }
-[e $U 357  ]
-"22
-[e :U 355 ]
-[; ;main.c: 22: else if (com_flg == 0){
-[e $ ! == -> _com_flg `i -> 0 `i 358  ]
-{
-[; ;main.c: 23: asm("clrwdt");
-"23
-[; <" clrwdt ;# ">
-"24
-}
-[e :U 358 ]
-"26
-[e :U 357 ]
-[; ;main.c: 24: }
-[; ;main.c: 26: if(RA1 == 0 && !b1_flag){
-[e $ ! && == -> _RA1 `i -> 0 `i ! != -> _b1_flag `i -> -> -> 0 `i `uc `i 359  ]
-{
-[; ;main.c: 27: RC5 = 1;
-"27
-[e = _RC5 -> -> 1 `i `b ]
-[; ;main.c: 28: RB5 = 1;
-"28
-[e = _RB5 -> -> 1 `i `b ]
-[; ;main.c: 29: b1_flag = 1;
-"29
-[e = _b1_flag -> -> 1 `i `uc ]
+[; ;main.c: 30: if((rcv_data[0] & 0b10000000) >> 7 == 1){
 "30
-}
-[; ;main.c: 30: }else if(RA0 == 1 && b1_flag){
-[e $U 360  ]
-[e :U 359 ]
-[e $ ! && == -> _RA0 `i -> 1 `i != -> _b1_flag `i -> -> -> 0 `i `uc `i 361  ]
+[e $ ! == >> & -> *U + &U _rcv_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i -> 128 `i -> 7 `i -> 1 `i 357  ]
 {
-[; ;main.c: 31: RC5 = 0;
+[; ;main.c: 31: game_mode = IN_GAME;
 "31
-[e = _RC5 -> -> 0 `i `b ]
-[; ;main.c: 32: RB5 = 0;
+[e = _game_mode . `E2567 1 ]
 "32
-[e = _RB5 -> -> 0 `i `b ]
-[; ;main.c: 33: b1_flag = 0;
+}
+[; ;main.c: 32: }else{
+[e $U 358  ]
+[e :U 357 ]
+{
+[; ;main.c: 33: game_mode = STANDBY;
 "33
-[e = _b1_flag -> -> 0 `i `uc ]
+[e = _game_mode . `E2567 0 ]
 "34
 }
-[e :U 361 ]
-"35
-[e :U 360 ]
+[e :U 358 ]
 [; ;main.c: 34: }
-[; ;main.c: 35: if(RA3 == 0 && !b2_flag){
-[e $ ! && == -> _RA3 `i -> 0 `i ! != -> _b2_flag `i -> -> -> 0 `i `uc `i 362  ]
+[; ;main.c: 35: for(i=0;i<4;i++){
+"35
 {
-[; ;main.c: 36: RC6 = 1;
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 359  ]
+[e $U 360  ]
+[e :U 359 ]
+{
+[; ;main.c: 36: if(((rcv_data[1] >> (4+i)) & 0b00000001) == 1){
 "36
-[e = _RC6 -> -> 1 `i `b ]
-[; ;main.c: 37: RB4 = 1;
+[e $ ! == & >> -> *U + &U _rcv_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i + -> 4 `i _i -> 1 `i -> 1 `i 362  ]
+{
+[; ;main.c: 37: bumper_enable[i][0] = 1;
 "37
-[e = _RB4 -> -> 1 `i `b ]
-[; ;main.c: 38: b2_flag = 1;
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
+[; ;main.c: 38: bumper_enable[i][1] = 0;
 "38
-[e = _b2_flag -> -> 1 `i `uc ]
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 39: bumper_enable[i][2] = 1;
 "39
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
+"40
 }
-[; ;main.c: 39: }else if(RA2 == 1 && b2_flag){
+[; ;main.c: 40: }else{
 [e $U 363  ]
 [e :U 362 ]
-[e $ ! && == -> _RA2 `i -> 1 `i != -> _b2_flag `i -> -> -> 0 `i `uc `i 364  ]
 {
-[; ;main.c: 40: RC6 = 0;
-"40
-[e = _RC6 -> -> 0 `i `b ]
-[; ;main.c: 41: RB4 = 0;
+[; ;main.c: 41: bumper_enable[i][0] = 0;
 "41
-[e = _RB4 -> -> 0 `i `b ]
-[; ;main.c: 42: b2_flag = 0;
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 42: if((((rcv_data[1] >> i) & 0b00000001) == 1) && bumper_enable[i][2]){
 "42
-[e = _b2_flag -> -> 0 `i `uc ]
+[e $ ! && == & >> -> *U + &U _rcv_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i _i -> 1 `i -> 1 `i != -> *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i 364  ]
+{
+[; ;main.c: 43: bumper_enable[i][1] = 1;
 "43
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
+[; ;main.c: 44: bumper_enable[i][2] = 0;
+"44
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+"45
 }
 [e :U 364 ]
-"44
-[e :U 363 ]
-[; ;main.c: 43: }
-[; ;main.c: 44: if(RA5 == 0 && !b3_flag){
-[e $ ! && == -> _RA5 `i -> 0 `i ! != -> _b3_flag `i -> -> -> 0 `i `uc `i 365  ]
-{
-[; ;main.c: 45: RC7 = 1;
-"45
-[e = _RC7 -> -> 1 `i `b ]
-[; ;main.c: 46: RB3 = 1;
+[; ;main.c: 45: }
+[; ;main.c: 46: if(((rcv_data[1] >> i) & 0b00000001) == 0){
 "46
-[e = _RB3 -> -> 1 `i `b ]
-[; ;main.c: 47: b3_flag = 1;
+[e $ ! == & >> -> *U + &U _rcv_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i _i -> 1 `i -> 0 `i 365  ]
+{
+[; ;main.c: 47: bumper_enable[i][1] = 0;
 "47
-[e = _b3_flag -> -> 1 `i `uc ]
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 48: bumper_enable[i][2] = 1;
 "48
-}
-[; ;main.c: 48: }else if(RA4 == 1 && b3_flag){
-[e $U 366  ]
-[e :U 365 ]
-[e $ ! && == -> _RA4 `i -> 1 `i != -> _b3_flag `i -> -> -> 0 `i `uc `i 367  ]
-{
-[; ;main.c: 49: RC7 = 0;
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
 "49
-[e = _RC7 -> -> 0 `i `b ]
-[; ;main.c: 50: RB3 = 0;
+}
+[e :U 365 ]
 "50
-[e = _RB3 -> -> 0 `i `b ]
-[; ;main.c: 51: b3_flag = 0;
+}
+[e :U 363 ]
 "51
-[e = _b3_flag -> -> 0 `i `uc ]
+}
+"35
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 359  ]
+[e :U 360 ]
+"51
+}
+[; ;main.c: 49: }
+[; ;main.c: 50: }
+[; ;main.c: 51: }
+[; ;main.c: 52: if(((rcv_data[0] >> recet_read_bit) & 0b00000001) == 1){
 "52
-}
-[e :U 367 ]
+[e $ ! == & >> -> *U + &U _rcv_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _rcv_data `ui `ux `i _recet_read_bit -> 1 `i -> 1 `i 366  ]
+{
+[; ;main.c: 53: snd_data[1] &= 0b11110000;
 "53
-[e :U 366 ]
-[; ;main.c: 52: }
-[; ;main.c: 53: if(RA6 == 0 && !b4_flag){
-[e $ ! && == -> _RA6 `i -> 0 `i ! != -> _b4_flag `i -> -> -> 0 `i `uc `i 368  ]
-{
-[; ;main.c: 54: RB0 = 1;
+[e =& *U + &U _snd_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _snd_data `ui `ux -> -> 240 `i `uc ]
+[; ;main.c: 54: snd_data[1] |= bumper_hit;
 "54
-[e = _RB0 -> -> 1 `i `b ]
-[; ;main.c: 55: RB2 = 1;
+[e =| *U + &U _snd_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _snd_data `ui `ux _bumper_hit ]
+[; ;main.c: 55: bumper_hit = 0;
 "55
-[e = _RB2 -> -> 1 `i `b ]
-[; ;main.c: 56: b4_flag = 1;
+[e = _bumper_hit -> -> 0 `i `uc ]
+[; ;main.c: 56: if(recet_read_bit == 0){
 "56
-[e = _b4_flag -> -> 1 `i `uc ]
-"57
-}
-[; ;main.c: 57: }else if(RA7 == 1 && b4_flag){
-[e $U 369  ]
-[e :U 368 ]
-[e $ ! && == -> _RA7 `i -> 1 `i != -> _b4_flag `i -> -> -> 0 `i `uc `i 370  ]
+[e $ ! == -> _recet_read_bit `i -> 0 `i 367  ]
 {
-[; ;main.c: 58: RB0 = 0;
+[; ;main.c: 57: recet_read_bit = 1;
+"57
+[e = _recet_read_bit -> -> 1 `i `uc ]
 "58
-[e = _RB0 -> -> 0 `i `b ]
-[; ;main.c: 59: RB2 = 0;
-"59
-[e = _RB2 -> -> 0 `i `b ]
-[; ;main.c: 60: RB0 = 0;
-"60
-[e = _RB0 -> -> 0 `i `b ]
-[; ;main.c: 61: b4_flag = 0;
-"61
-[e = _b4_flag -> -> 0 `i `uc ]
-"62
 }
-[e :U 370 ]
-"63
+[; ;main.c: 58: }else if(recet_read_bit == 1){
+[e $U 368  ]
+[e :U 367 ]
+[e $ ! == -> _recet_read_bit `i -> 1 `i 369  ]
+{
+[; ;main.c: 59: recet_read_bit = 0;
+"59
+[e = _recet_read_bit -> -> 0 `i `uc ]
+"60
+}
 [e :U 369 ]
+"61
+[e :U 368 ]
+}
+[e :U 366 ]
+[; ;main.c: 60: }
+[; ;main.c: 61: }
+[; ;main.c: 62: snd_data[1] &= 0b11101111;
+"62
+[e =& *U + &U _snd_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _snd_data `ui `ux -> -> 239 `i `uc ]
+[; ;main.c: 63: snd_data[1] |= recet_read_bit << 4;
+"63
+[e =| *U + &U _snd_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _snd_data `ui `ux -> << -> _recet_read_bit `i -> 4 `i `uc ]
+[; ;main.c: 64: asm("clrwdt");
+"64
+[; <" clrwdt ;# ">
+"65
+}
+[; ;main.c: 65: }
+[e $U 370  ]
+"66
+[e :U 355 ]
+[; ;main.c: 66: else if (com_flg == 0){
+[e $ ! == -> _com_flg `i -> 0 `i 371  ]
+{
+[; ;main.c: 67: game_mode = STANDBY;
+"67
+[e = _game_mode . `E2567 0 ]
+[; ;main.c: 68: asm("clrwdt");
+"68
+[; <" clrwdt ;# ">
+"69
+}
+[e :U 371 ]
+"71
+[e :U 370 ]
+[; ;main.c: 69: }
+[; ;main.c: 71: if(game_mode == IN_GAME){
+[e $ ! == -> _game_mode `i -> . `E2567 1 `i 372  ]
+{
+[; ;main.c: 72: for(i=0;i<4;i++){
+"72
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 373  ]
+[e $U 374  ]
+[e :U 373 ]
+{
+[; ;main.c: 73: if((input(S_1,i) == 0 && !bumper_flag[i] && bumper_enable[i][0]) || bumper_enable[i][1]){
+"73
+[e $ ! || && && == ( _input (2 , . `E2575 0 _i -> 0 `i ! != -> *U + &U _bumper_flag * -> -> _i `ui `ux -> -> # *U &U _bumper_flag `ui `ux `i -> -> -> 0 `i `uc `i != -> *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i != -> *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i 376  ]
+{
+[; ;main.c: 74: output(LED,i,1);
+"74
+[e ( _output (3 , , . `E2571 0 _i -> 1 `i ]
+[; ;main.c: 75: output(OUT,i,1);
+"75
+[e ( _output (3 , , . `E2571 1 _i -> 1 `i ]
+[; ;main.c: 76: bumper_flag[i] = 1;
+"76
+[e = *U + &U _bumper_flag * -> -> _i `ui `ux -> -> # *U &U _bumper_flag `ui `ux -> -> 1 `i `uc ]
+[; ;main.c: 77: bumper_enable[i][1] = 0;
+"77
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 78: if(!bumper_enable[i][1]){
+"78
+[e $ ! ! != -> *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux `i -> -> -> 0 `i `uc `i 377  ]
+{
+[; ;main.c: 79: bumper_hit |= 0b00000001 << i;
+"79
+[e =| _bumper_hit -> << -> 1 `i _i `uc ]
+"80
+}
+[e :U 377 ]
+"81
+}
+[; ;main.c: 80: }
+[; ;main.c: 81: }else if(input(S_2,i) == 1 && bumper_flag[i]){
+[e $U 378  ]
+[e :U 376 ]
+[e $ ! && == ( _input (2 , . `E2575 1 _i -> 1 `i != -> *U + &U _bumper_flag * -> -> _i `ui `ux -> -> # *U &U _bumper_flag `ui `ux `i -> -> -> 0 `i `uc `i 379  ]
+{
+[; ;main.c: 82: output(LED,i,0);
+"82
+[e ( _output (3 , , . `E2571 0 _i -> 0 `i ]
+[; ;main.c: 83: output(OUT,i,0);
+"83
+[e ( _output (3 , , . `E2571 1 _i -> 0 `i ]
+[; ;main.c: 84: output(LED,i,0);
+"84
+[e ( _output (3 , , . `E2571 0 _i -> 0 `i ]
+[; ;main.c: 85: output(OUT,i,0);
+"85
+[e ( _output (3 , , . `E2571 1 _i -> 0 `i ]
+[; ;main.c: 86: bumper_flag[i] = 0;
+"86
+[e = *U + &U _bumper_flag * -> -> _i `ui `ux -> -> # *U &U _bumper_flag `ui `ux -> -> 0 `i `uc ]
+"87
+}
+[e :U 379 ]
+"88
+[e :U 378 ]
+}
+"72
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 373  ]
+[e :U 374 ]
+"88
+}
+"89
+}
+[; ;main.c: 87: }
+[; ;main.c: 88: }
+[; ;main.c: 89: }else{
+[e $U 380  ]
+[e :U 372 ]
+{
+[; ;main.c: 90: output(LED,4,0);
+"90
+[e ( _output (3 , , . `E2571 0 -> 4 `i -> 0 `i ]
+[; ;main.c: 91: output(OUT,4,0);
+"91
+[e ( _output (3 , , . `E2571 1 -> 4 `i -> 0 `i ]
+[; ;main.c: 92: output(LED,4,0);
+"92
+[e ( _output (3 , , . `E2571 0 -> 4 `i -> 0 `i ]
+[; ;main.c: 93: output(OUT,4,0);
+"93
+[e ( _output (3 , , . `E2571 1 -> 4 `i -> 0 `i ]
+[; ;main.c: 94: for(i=0;i<4;i++){
+"94
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 381  ]
+[e $U 382  ]
+[e :U 381 ]
+{
+[; ;main.c: 95: bumper_enable[i][0] = 0;
+"95
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 96: bumper_enable[i][1] = 0;
+"96
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 97: bumper_enable[i][2] = 1;
+"97
+[e = *U + &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _bumper_enable * -> -> _i `ui `ux -> * -> # *U &U *U &U _bumper_enable `ui -> -> 3 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
+"98
+}
+"94
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 381  ]
+[e :U 382 ]
+"98
+}
+"99
+}
+[e :U 380 ]
+"100
 }
 [e :U 352 ]
-"16
+"26
 [e $U 353  ]
 [e :U 354 ]
-[; ;main.c: 62: }
-[; ;main.c: 63: }
-[; ;main.c: 64: }
-"64
+[; ;main.c: 98: }
+[; ;main.c: 99: }
+[; ;main.c: 100: }
+[; ;main.c: 101: }
+"101
 [e :UE 351 ]
 }
-"66
+"103
 [v _init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 66: void init(void){
+[; ;main.c: 103: void init(void){
 [e :U _init ]
 [f ]
-"67
+"104
 [v _addr `uc ~T0 @X0 1 a ]
-[; ;main.c: 67: uint8_t addr = 0x10;
-[e = _addr -> -> 16 `i `uc ]
-[; ;main.c: 70: OSCCON = 0xF0;
-"70
+[; ;main.c: 104: uint8_t addr = 0x11;
+[e = _addr -> -> 17 `i `uc ]
+[; ;main.c: 107: OSCCON = 0xF0;
+"107
 [e = _OSCCON -> -> 240 `i `uc ]
-[; ;main.c: 73: ANSELA = 0x00;
-"73
+[; ;main.c: 110: ANSELA = 0x00;
+"110
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 74: ANSELB = 0x00;
-"74
+[; ;main.c: 111: ANSELB = 0x00;
+"111
 [e = _ANSELB -> -> 0 `i `uc ]
-[; ;main.c: 76: TRISA = 0xFF;
-"76
+[; ;main.c: 113: TRISA = 0xFF;
+"113
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 77: TRISB = 0x00;
-"77
+[; ;main.c: 114: TRISB = 0x00;
+"114
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 78: WPUB = 0x00;
-"78
+[; ;main.c: 115: WPUB = 0x00;
+"115
 [e = _WPUB -> -> 0 `i `uc ]
-[; ;main.c: 79: TRISCbits.TRISC0 = 0;
-"79
+[; ;main.c: 116: TRISCbits.TRISC0 = 0;
+"116
 [e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 80: TRISCbits.TRISC1 = 0;
-"80
+[; ;main.c: 117: TRISCbits.TRISC1 = 0;
+"117
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 81: TRISCbits.TRISC2 = 0;
-"81
+[; ;main.c: 118: TRISCbits.TRISC2 = 0;
+"118
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 82: TRISCbits.TRISC5 = 0;
-"82
+[; ;main.c: 119: TRISCbits.TRISC5 = 0;
+"119
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 83: TRISCbits.TRISC6 = 0;
-"83
+[; ;main.c: 120: TRISCbits.TRISC6 = 0;
+"120
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 84: TRISCbits.TRISC7 = 0;
-"84
+[; ;main.c: 121: TRISCbits.TRISC7 = 0;
+"121
 [e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 86: RC5 = 0;
-"86
-[e = _RC5 -> -> 0 `i `b ]
-[; ;main.c: 87: RB5 = 0;
-"87
-[e = _RB5 -> -> 0 `i `b ]
-[; ;main.c: 88: RC6 = 0;
-"88
-[e = _RC6 -> -> 0 `i `b ]
-[; ;main.c: 89: RB4 = 0;
-"89
-[e = _RB4 -> -> 0 `i `b ]
-[; ;main.c: 90: RC7 = 0;
-"90
-[e = _RC7 -> -> 0 `i `b ]
-[; ;main.c: 91: RB3 = 0;
-"91
-[e = _RB3 -> -> 0 `i `b ]
-[; ;main.c: 92: RB0 = 0;
-"92
-[e = _RB0 -> -> 0 `i `b ]
-[; ;main.c: 93: RB2 = 0;
-"93
-[e = _RB2 -> -> 0 `i `b ]
-[; ;main.c: 96: WDTCON = 0x13;
-"96
+[; ;main.c: 123: output(LED,4,0);
+"123
+[e ( _output (3 , , . `E2571 0 -> 4 `i -> 0 `i ]
+[; ;main.c: 124: output(OUT,4,0);
+"124
+[e ( _output (3 , , . `E2571 1 -> 4 `i -> 0 `i ]
+[; ;main.c: 125: output(LED,4,0);
+"125
+[e ( _output (3 , , . `E2571 0 -> 4 `i -> 0 `i ]
+[; ;main.c: 126: output(OUT,4,0);
+"126
+[e ( _output (3 , , . `E2571 1 -> 4 `i -> 0 `i ]
+[; ;main.c: 129: WDTCON = 0x13;
+"129
 [e = _WDTCON -> -> 19 `i `uc ]
-[; ;main.c: 98: I2C_init(addr);
-"98
+[; ;main.c: 131: I2C_init(addr);
+"131
 [e ( _I2C_init (1 _addr ]
-[; ;main.c: 99: }
-"99
-[e :UE 371 ]
+[; ;main.c: 132: }
+"132
+[e :UE 384 ]
+}
+"134
+[v _output `(v ~T0 @X0 1 ef3`E2571`i`i ]
+{
+[; ;main.c: 134: void output(Output_t type, int num, int output){
+[e :U _output ]
+[v _type `E2571 ~T0 @X0 1 r1 ]
+[v _num `i ~T0 @X0 1 r2 ]
+[v _output `i ~T0 @X0 1 r3 ]
+[f ]
+[; ;main.c: 135: if(type == LED){
+"135
+[e $ ! == -> _type `i -> . `E2571 0 `i 386  ]
+{
+[; ;main.c: 136: switch (num)
+"136
+[e $U 388  ]
+[; ;main.c: 137: {
+"137
+{
+[; ;main.c: 138: case 0:
+"138
+[e :U 389 ]
+[; ;main.c: 139: RC5 = output;
+"139
+[e = _RC5 -> _output `b ]
+[; ;main.c: 140: break;
+"140
+[e $U 387  ]
+[; ;main.c: 141: case 1:
+"141
+[e :U 390 ]
+[; ;main.c: 142: RC6 = output;
+"142
+[e = _RC6 -> _output `b ]
+[; ;main.c: 143: break;
+"143
+[e $U 387  ]
+[; ;main.c: 144: case 2:
+"144
+[e :U 391 ]
+[; ;main.c: 145: RC7 = output;
+"145
+[e = _RC7 -> _output `b ]
+[; ;main.c: 146: break;
+"146
+[e $U 387  ]
+[; ;main.c: 147: case 3:
+"147
+[e :U 392 ]
+[; ;main.c: 148: RB0 = output;
+"148
+[e = _RB0 -> _output `b ]
+[; ;main.c: 149: break;
+"149
+[e $U 387  ]
+[; ;main.c: 150: case 4:
+"150
+[e :U 393 ]
+[; ;main.c: 151: RC5 = output;
+"151
+[e = _RC5 -> _output `b ]
+[; ;main.c: 152: RC6 = output;
+"152
+[e = _RC6 -> _output `b ]
+[; ;main.c: 153: RC7 = output;
+"153
+[e = _RC7 -> _output `b ]
+[; ;main.c: 154: RB0 = output;
+"154
+[e = _RB0 -> _output `b ]
+[; ;main.c: 155: break;
+"155
+[e $U 387  ]
+"156
+}
+[; ;main.c: 156: }
+[e $U 387  ]
+"136
+[e :U 388 ]
+[e [\ _num , $ -> 0 `i 389
+ , $ -> 1 `i 390
+ , $ -> 2 `i 391
+ , $ -> 3 `i 392
+ , $ -> 4 `i 393
+ 387 ]
+"156
+[e :U 387 ]
+"157
+}
+[e :U 386 ]
+[; ;main.c: 157: }
+[; ;main.c: 158: if(type == OUT){
+"158
+[e $ ! == -> _type `i -> . `E2571 1 `i 394  ]
+{
+[; ;main.c: 159: switch (num)
+"159
+[e $U 396  ]
+[; ;main.c: 160: {
+"160
+{
+[; ;main.c: 161: case 0:
+"161
+[e :U 397 ]
+[; ;main.c: 162: RB5 = output;
+"162
+[e = _RB5 -> _output `b ]
+[; ;main.c: 163: break;
+"163
+[e $U 395  ]
+[; ;main.c: 164: case 1:
+"164
+[e :U 398 ]
+[; ;main.c: 165: RB4 = output;
+"165
+[e = _RB4 -> _output `b ]
+[; ;main.c: 166: break;
+"166
+[e $U 395  ]
+[; ;main.c: 167: case 2:
+"167
+[e :U 399 ]
+[; ;main.c: 168: RB3 = output;
+"168
+[e = _RB3 -> _output `b ]
+[; ;main.c: 169: break;
+"169
+[e $U 395  ]
+[; ;main.c: 170: case 3:
+"170
+[e :U 400 ]
+[; ;main.c: 171: RB2 = output;
+"171
+[e = _RB2 -> _output `b ]
+[; ;main.c: 172: break;
+"172
+[e $U 395  ]
+[; ;main.c: 173: case 4:
+"173
+[e :U 401 ]
+[; ;main.c: 174: RB5 = output;
+"174
+[e = _RB5 -> _output `b ]
+[; ;main.c: 175: RB4 = output;
+"175
+[e = _RB4 -> _output `b ]
+[; ;main.c: 176: RB3 = output;
+"176
+[e = _RB3 -> _output `b ]
+[; ;main.c: 177: RB2 = output;
+"177
+[e = _RB2 -> _output `b ]
+[; ;main.c: 178: break;
+"178
+[e $U 395  ]
+"179
+}
+[; ;main.c: 179: }
+[e $U 395  ]
+"159
+[e :U 396 ]
+[e [\ _num , $ -> 0 `i 397
+ , $ -> 1 `i 398
+ , $ -> 2 `i 399
+ , $ -> 3 `i 400
+ , $ -> 4 `i 401
+ 395 ]
+"179
+[e :U 395 ]
+"180
+}
+[e :U 394 ]
+[; ;main.c: 180: }
+[; ;main.c: 181: }
+"181
+[e :UE 385 ]
+}
+"183
+[v _input `(i ~T0 @X0 1 ef2`E2575`i ]
+{
+[; ;main.c: 183: int input(Input_t type, int num){
+[e :U _input ]
+[v _type `E2575 ~T0 @X0 1 r1 ]
+[v _num `i ~T0 @X0 1 r2 ]
+[f ]
+[; ;main.c: 184: if(type == S_1){
+"184
+[e $ ! == -> _type `i -> . `E2575 0 `i 403  ]
+{
+[; ;main.c: 185: switch (num)
+"185
+[e $U 405  ]
+[; ;main.c: 186: {
+"186
+{
+[; ;main.c: 187: case 0:
+"187
+[e :U 406 ]
+[; ;main.c: 188: return RA1;
+"188
+[e ) -> _RA1 `i ]
+[e $UE 402  ]
+[; ;main.c: 189: break;
+"189
+[e $U 404  ]
+[; ;main.c: 190: case 1:
+"190
+[e :U 407 ]
+[; ;main.c: 191: return RA3;
+"191
+[e ) -> _RA3 `i ]
+[e $UE 402  ]
+[; ;main.c: 192: break;
+"192
+[e $U 404  ]
+[; ;main.c: 193: case 2:
+"193
+[e :U 408 ]
+[; ;main.c: 194: return RA5;
+"194
+[e ) -> _RA5 `i ]
+[e $UE 402  ]
+[; ;main.c: 195: break;
+"195
+[e $U 404  ]
+[; ;main.c: 196: case 3:
+"196
+[e :U 409 ]
+[; ;main.c: 197: return RA6;
+"197
+[e ) -> _RA6 `i ]
+[e $UE 402  ]
+[; ;main.c: 198: break;
+"198
+[e $U 404  ]
+"199
+}
+[; ;main.c: 199: }
+[e $U 404  ]
+"185
+[e :U 405 ]
+[e [\ _num , $ -> 0 `i 406
+ , $ -> 1 `i 407
+ , $ -> 2 `i 408
+ , $ -> 3 `i 409
+ 404 ]
+"199
+[e :U 404 ]
+"200
+}
+[e :U 403 ]
+[; ;main.c: 200: }
+[; ;main.c: 201: if(type == S_2){
+"201
+[e $ ! == -> _type `i -> . `E2575 1 `i 410  ]
+{
+[; ;main.c: 202: switch (num)
+"202
+[e $U 412  ]
+[; ;main.c: 203: {
+"203
+{
+[; ;main.c: 204: case 0:
+"204
+[e :U 413 ]
+[; ;main.c: 205: return RA0;
+"205
+[e ) -> _RA0 `i ]
+[e $UE 402  ]
+[; ;main.c: 206: break;
+"206
+[e $U 411  ]
+[; ;main.c: 207: case 1:
+"207
+[e :U 414 ]
+[; ;main.c: 208: return RA2;
+"208
+[e ) -> _RA2 `i ]
+[e $UE 402  ]
+[; ;main.c: 209: break;
+"209
+[e $U 411  ]
+[; ;main.c: 210: case 2:
+"210
+[e :U 415 ]
+[; ;main.c: 211: return RA4;
+"211
+[e ) -> _RA4 `i ]
+[e $UE 402  ]
+[; ;main.c: 212: break;
+"212
+[e $U 411  ]
+[; ;main.c: 213: case 3:
+"213
+[e :U 416 ]
+[; ;main.c: 214: return RA7;
+"214
+[e ) -> _RA7 `i ]
+[e $UE 402  ]
+[; ;main.c: 215: break;
+"215
+[e $U 411  ]
+"216
+}
+[; ;main.c: 216: }
+[e $U 411  ]
+"202
+[e :U 412 ]
+[e [\ _num , $ -> 0 `i 413
+ , $ -> 1 `i 414
+ , $ -> 2 `i 415
+ , $ -> 3 `i 416
+ 411 ]
+"216
+[e :U 411 ]
+"217
+}
+[e :U 410 ]
+[; ;main.c: 217: }
+[; ;main.c: 218: }
+"218
+[e :UE 402 ]
 }
 [v $root$_HAND `(v ~T0 @X0 0 e ]
-[v F2581 `(v ~T0 @X0 1 tf ]
-"101
-[v _HAND `IF2581 ~T0 @X0 1 e ]
+[v F2610 `(v ~T0 @X0 1 tf ]
+"220
+[v _HAND `IF2610 ~T0 @X0 1 e ]
 {
-[; ;main.c: 101: void interrupt HAND(void){
+[; ;main.c: 220: void interrupt HAND(void){
 [e :U _HAND ]
 [f ]
-[; ;main.c: 102: Slave_Interrupt();
-"102
+[; ;main.c: 221: Slave_Interrupt();
+"221
 [e ( _Slave_Interrupt ..  ]
-[; ;main.c: 103: }
-"103
-[e :UE 372 ]
+[; ;main.c: 222: }
+"222
+[e :UE 417 ]
 }

@@ -3,10 +3,27 @@
 [d edition pro ]
 [d chip 16F1938 ]
 [d frameptr 6 ]
+"18 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+[e E2567 . `uc
+STANDBY 0
+IN_GAME 1
+]
+"73
+[e E2575 . `uc
+S_1 0
+S_2 1
+]
+"74
+[e E2571 . `uc
+LED 0
+OUT 1
+]
 "62 /Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 /Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
 "6 /Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/pic/__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -19,9 +36,13 @@
 [v _I2C_ReceiveCheck I2C_ReceiveCheck `(uc  1 e 1 0 ]
 "7 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 [v _main main `(v  1 e 1 0 ]
-"66
+"103
 [v _init init `(v  1 e 1 0 ]
-"101
+"134
+[v _output output `(v  1 e 1 0 ]
+"183
+[v _input input `(i  1 e 2 0 ]
+"220
 [v _HAND HAND `II(v  1 e 1 0 ]
 "1229 /Users/UnknownSP/microchip/xc8/v2.31/pic/include/proc/pic16f1938.h
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
@@ -156,22 +177,47 @@
 "7 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"12
-[v main@b4_flag b4_flag `uc  1 a 1 4 ]
 "11
-[v main@b3_flag b3_flag `uc  1 a 1 3 ]
-"10
-[v main@b2_flag b2_flag `uc  1 a 1 2 ]
+[v main@bumper_enable bumper_enable `[4][3]uc  1 a 12 6 ]
 "9
-[v main@b1_flag b1_flag `uc  1 a 1 1 ]
+[v main@bumper_flag bumper_flag `[4]uc  1 a 4 2 ]
+"22
+[v main@i i `i  1 a 2 22 ]
+"19
+[v main@recet_read_bit recet_read_bit `uc  1 a 1 21 ]
 "8
-[v main@com_flg com_flg `uc  1 a 1 0 ]
-"64
+[v main@com_flg com_flg `uc  1 a 1 20 ]
+"18
+[v main@game_mode game_mode `E2567  1 a 1 19 ]
+"20
+[v main@bumper_hit bumper_hit `uc  1 a 1 18 ]
+"9
+[v main@F2596 F2596 `[4][3]uc  1 s 12 F2596 ]
+"101
 } 0
-"66
+"183
+[v _input input `(i  1 e 2 0 ]
+{
+[v input@type type `E2575  1 a 1 wreg ]
+[v input@type type `E2575  1 a 1 wreg ]
+[v input@num num `i  1 p 2 2 ]
+[v input@type type `E2575  1 a 1 6 ]
+"218
+} 0
+"103
 [v _init init `(v  1 e 1 0 ]
 {
-"99
+"132
+} 0
+"134
+[v _output output `(v  1 e 1 0 ]
+{
+[v output@type type `E2571  1 a 1 wreg ]
+[v output@type type `E2571  1 a 1 wreg ]
+[v output@num num `i  1 p 2 2 ]
+[v output@output output `i  1 p 2 4 ]
+[v output@type type `E2571  1 a 1 6 ]
+"181
 } 0
 "32 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
 [v _I2C_init I2C_init `(v  1 e 1 0 ]
@@ -182,17 +228,30 @@
 [v I2C_init@add add `uc  1 a 1 2 ]
 "64
 } 0
-"239
+"4 /Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 4 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 2 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
+"51
+} 0
+"239 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
 [v _I2C_ReceiveCheck I2C_ReceiveCheck `(uc  1 e 1 0 ]
 {
 "240
 [v I2C_ReceiveCheck@ans ans `i  1 a 2 2 ]
 "250
 } 0
-"101 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+"220 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 [v _HAND HAND `II(v  1 e 1 0 ]
 {
-"103
+"222
 } 0
 "181 /Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
 [v _Slave_Interrupt Slave_Interrupt `(v  1 e 1 0 ]
