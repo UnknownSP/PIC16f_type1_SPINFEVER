@@ -7,6 +7,7 @@ void init(void);
 void main(void) {
     uint8_t com_flg = 0;
     bool bumper_flag[4] = {false,false,false,false};
+    bool bumper_on_flag[4] = {false,false,false,false};
 
     bool bumper_enable[4][3] = {
         {false,false,false},
@@ -75,14 +76,19 @@ void main(void) {
                     output(OUT,i,1);
                     bumper_flag[i] = true;
                     bumper_enable[i][1] = false;
+                    bumper_on_flag[i] = false;
                     if(!bumper_enable[i][1]){
                         bumper_hit |= 0b00000001 << i;
                     }
-                }else if(input(S_2,i) == 1 && bumper_flag[i]){
+                }else if(input(S_2,i) == 0 && bumper_flag[i] && input(S_1,i) == 1){
                     output(LED,i,0);
                     output(OUT,i,0);
                     output(LED,i,0);
                     output(OUT,i,0);
+                    bumper_on_flag[i] = true;
+                }
+                if(input(S_2,i) == 1 && bumper_on_flag[i]){
+                    bumper_on_flag[i] = false;
                     bumper_flag[i] = false;
                 }
             }
@@ -95,6 +101,23 @@ void main(void) {
                 bumper_enable[i][0] = false;
                 bumper_enable[i][1] = false;
                 bumper_enable[i][2] = true;
+                bumper_on_flag[i] = false;
+                bumper_flag[i] = false;
+            }
+            bumper_hit = 0;
+            recet_read_bit = 0;
+        }
+
+        for(i=0;i<4;i++){
+            if(input(S_1,i) == 0){
+                snd_data[0] |= 0b00000001 << i;
+            }else{
+                snd_data[0] &= (0b11111111 ^ (0b00000001 << i));
+            }
+            if(input(S_2,i) == 0){
+                snd_data[0] |= 0b00000001 << (i+4);
+            }else{
+                snd_data[0] &= (0b11111111 ^ (0b00000001 << (i+4)));
             }
         }
     }

@@ -11,28 +11,28 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xc6Uw0Qo4.obj
+$/tmp/xc5ffSVXr.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 A A 2 2
 config CONFIG 4 8007 8007 2 2
 $bin/target.obj
 cinit CODE 0 C C 1B 2
-text1 CODE 0 305 305 90 2
-text2 CODE 0 3E3 3E3 46 2
-text3 CODE 0 25C 25C A9 2
-text4 CODE 0 429 429 16 2
-text5 CODE 0 43F 43F 11 2
-text6 CODE 0 450 450 11 2
-text8 CODE 0 395 395 4E 2
-maintext CODE 0 27 27 235 2
+text1 CODE 0 3A8 3A8 90 2
+text2 CODE 0 486 486 46 2
+text3 CODE 0 2FF 2FF A9 2
+text4 CODE 0 4CC 4CC 16 2
+text5 CODE 0 4E2 4E2 11 2
+text6 CODE 0 4F3 4F3 11 2
+text8 CODE 0 438 438 4E 2
+maintext CODE 0 27 27 2D8 2
 cstackCOMMON COMMON 1 70 70 7 1
-cstackBANK0 BANK0 1 20 20 18 1
-inittext CODE 0 46D 46D 6 2
+cstackBANK0 BANK0 1 20 20 1C 1
+inittext CODE 0 510 510 6 2
 intentry CODE 0 4 4 6 2
-bssBANK0 BANK0 1 38 38 15 1
-idataBANK0 CODE 0 461 461 C 2
-dataBANK0 BANK0 1 4D 4D C 1
-clrtext CODE 0 473 473 6 2
+bssBANK0 BANK0 1 3C 3C 19 1
+idataBANK0 CODE 0 504 504 C 2
+dataBANK0 BANK0 1 55 55 C 1
+clrtext CODE 0 516 516 6 2
 bssCOMMON COMMON 1 77 77 4 1
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
@@ -41,7 +41,7 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 59-6F 1
+RAM 61-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -54,7 +54,7 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 59-6F 1
+BANK0 61-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -65,9 +65,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 479-3FFF 2
+CONST 51C-3FFF 2
 ENTRY 2-3 2
-ENTRY 479-3FFF 2
+ENTRY 51C-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -91,9 +91,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2039-23EF 1
+STACK 2041-23EF 1
 CODE 2-3 2
-CODE 479-3FFF 2
+CODE 51C-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -111,9 +111,9 @@ BIGRAM 2000-23EF 1
 COMMON 7B-7D 1
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
-STRCODE 479-3FFF 2
+STRCODE 51C-3FFF 2
 STRING 2-3 2
-STRING 479-3FFF 2
+STRING 51C-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -128,254 +128,274 @@ STRING 479-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $bin/target.obj
-C cinit CODE >1225:/tmp/xcU8ZJQPd.as
-C cinit CODE >1228:/tmp/xcU8ZJQPd.as
-C cinit CODE >1282:/tmp/xcU8ZJQPd.as
-D cinit CODE >1283:/tmp/xcU8ZJQPd.as
-E cinit CODE >1284:/tmp/xcU8ZJQPd.as
-F cinit CODE >1285:/tmp/xcU8ZJQPd.as
-10 cinit CODE >1286:/tmp/xcU8ZJQPd.as
-11 cinit CODE >1287:/tmp/xcU8ZJQPd.as
-12 cinit CODE >1288:/tmp/xcU8ZJQPd.as
-13 cinit CODE >1289:/tmp/xcU8ZJQPd.as
-14 cinit CODE >1290:/tmp/xcU8ZJQPd.as
-15 cinit CODE >1291:/tmp/xcU8ZJQPd.as
-18 cinit CODE >1308:/tmp/xcU8ZJQPd.as
-19 cinit CODE >1309:/tmp/xcU8ZJQPd.as
-1A cinit CODE >1310:/tmp/xcU8ZJQPd.as
-1B cinit CODE >1311:/tmp/xcU8ZJQPd.as
-1C cinit CODE >1315:/tmp/xcU8ZJQPd.as
-1D cinit CODE >1316:/tmp/xcU8ZJQPd.as
-1E cinit CODE >1317:/tmp/xcU8ZJQPd.as
-1F cinit CODE >1318:/tmp/xcU8ZJQPd.as
-20 cinit CODE >1319:/tmp/xcU8ZJQPd.as
-21 cinit CODE >1320:/tmp/xcU8ZJQPd.as
-23 cinit CODE >1326:/tmp/xcU8ZJQPd.as
-23 cinit CODE >1328:/tmp/xcU8ZJQPd.as
-24 cinit CODE >1329:/tmp/xcU8ZJQPd.as
-25 cinit CODE >1330:/tmp/xcU8ZJQPd.as
-4 intentry CODE >220:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-6 intentry CODE >221:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-8 intentry CODE >222:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-395 text8 CODE >181:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-395 text8 CODE >185:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-398 text8 CODE >186:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-39B text8 CODE >188:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-39D text8 CODE >190:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3A1 text8 CODE >191:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3A2 text8 CODE >192:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3A3 text8 CODE >193:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3A4 text8 CODE >195:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3AB text8 CODE >196:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3AF text8 CODE >197:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3B3 text8 CODE >199:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3B4 text8 CODE >201:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3B4 text8 CODE >203:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3B6 text8 CODE >205:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3BA text8 CODE >206:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3BB text8 CODE >207:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3C4 text8 CODE >212:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3C4 text8 CODE >214:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3C6 text8 CODE >216:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3CE text8 CODE >217:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3D3 text8 CODE >218:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3D7 text8 CODE >219:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3D9 text8 CODE >220:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3DB text8 CODE >221:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3DC text8 CODE >223:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3DE text8 CODE >227:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3DE text8 CODE >230:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3E1 text8 CODE >231:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-3E2 text8 CODE >233:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-450 text6 CODE >239:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-450 text6 CODE >242:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-452 text6 CODE >243:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-455 text6 CODE >244:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-459 text6 CODE >245:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-45E text6 CODE >246:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-45F text6 CODE >249:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-460 text6 CODE >250:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-43F text5 CODE >4:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-440 text5 CODE >6:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-441 text5 CODE >43:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-443 text5 CODE >44:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-447 text5 CODE >45:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-449 text5 CODE >46:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-44B text5 CODE >47:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-44E text5 CODE >50:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-44F text5 CODE >51:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
-429 text4 CODE >32:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-42A text4 CODE >50:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-42C text4 CODE >51:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-42E text4 CODE >52:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-42F text4 CODE >53:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-431 text4 CODE >54:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-433 text4 CODE >55:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-435 text4 CODE >56:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-436 text4 CODE >57:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-437 text4 CODE >58:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-438 text4 CODE >59:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-43A text4 CODE >60:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-43B text4 CODE >61:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-43D text4 CODE >62:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-43E text4 CODE >64:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
-25C text3 CODE >134:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-25D text3 CODE >135:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-261 text3 CODE >138:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-261 text3 CODE >139:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-268 text3 CODE >140:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-269 text3 CODE >141:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-269 text3 CODE >142:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-270 text3 CODE >143:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-271 text3 CODE >144:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-271 text3 CODE >145:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-278 text3 CODE >146:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-279 text3 CODE >147:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-279 text3 CODE >148:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-27A text3 CODE >150:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-27A text3 CODE >151:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-281 text3 CODE >152:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-288 text3 CODE >153:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-28F text3 CODE >154:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-296 text3 CODE >155:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-297 text3 CODE >136:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2AD text3 CODE >158:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2B1 text3 CODE >161:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2B1 text3 CODE >162:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2B8 text3 CODE >163:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2B9 text3 CODE >164:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2B9 text3 CODE >165:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C0 text3 CODE >166:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C1 text3 CODE >167:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C1 text3 CODE >168:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C8 text3 CODE >169:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C9 text3 CODE >170:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2C9 text3 CODE >171:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2D0 text3 CODE >172:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2D1 text3 CODE >173:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2D1 text3 CODE >174:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2D8 text3 CODE >175:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2DF text3 CODE >176:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2E6 text3 CODE >177:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2ED text3 CODE >178:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-2EE text3 CODE >159:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-304 text3 CODE >181:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E3 text2 CODE >103:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E3 text2 CODE >107:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E6 text2 CODE >110:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E8 text2 CODE >111:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E9 text2 CODE >113:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3EC text2 CODE >114:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3ED text2 CODE >115:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3EF text2 CODE >116:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F1 text2 CODE >117:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F2 text2 CODE >118:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F3 text2 CODE >119:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F4 text2 CODE >120:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F5 text2 CODE >121:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F6 text2 CODE >123:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-401 text2 CODE >124:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-40C text2 CODE >125:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-417 text2 CODE >126:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-422 text2 CODE >129:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-425 text2 CODE >131:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-428 text2 CODE >132:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-305 text1 CODE >183:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-306 text1 CODE >184:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-30A text1 CODE >188:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-316 text1 CODE >191:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-322 text1 CODE >194:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-32E text1 CODE >197:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-33A text1 CODE >185:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-34D text1 CODE >201:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-351 text1 CODE >205:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-35D text1 CODE >208:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-369 text1 CODE >211:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-375 text1 CODE >214:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-381 text1 CODE >202:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-394 text1 CODE >218:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+C cinit CODE >1225:/tmp/xcsSXiOtf.as
+C cinit CODE >1228:/tmp/xcsSXiOtf.as
+C cinit CODE >1285:/tmp/xcsSXiOtf.as
+D cinit CODE >1286:/tmp/xcsSXiOtf.as
+E cinit CODE >1287:/tmp/xcsSXiOtf.as
+F cinit CODE >1288:/tmp/xcsSXiOtf.as
+10 cinit CODE >1289:/tmp/xcsSXiOtf.as
+11 cinit CODE >1290:/tmp/xcsSXiOtf.as
+12 cinit CODE >1291:/tmp/xcsSXiOtf.as
+13 cinit CODE >1292:/tmp/xcsSXiOtf.as
+14 cinit CODE >1293:/tmp/xcsSXiOtf.as
+15 cinit CODE >1294:/tmp/xcsSXiOtf.as
+18 cinit CODE >1311:/tmp/xcsSXiOtf.as
+19 cinit CODE >1312:/tmp/xcsSXiOtf.as
+1A cinit CODE >1313:/tmp/xcsSXiOtf.as
+1B cinit CODE >1314:/tmp/xcsSXiOtf.as
+1C cinit CODE >1318:/tmp/xcsSXiOtf.as
+1D cinit CODE >1319:/tmp/xcsSXiOtf.as
+1E cinit CODE >1320:/tmp/xcsSXiOtf.as
+1F cinit CODE >1321:/tmp/xcsSXiOtf.as
+20 cinit CODE >1322:/tmp/xcsSXiOtf.as
+21 cinit CODE >1323:/tmp/xcsSXiOtf.as
+23 cinit CODE >1329:/tmp/xcsSXiOtf.as
+23 cinit CODE >1331:/tmp/xcsSXiOtf.as
+24 cinit CODE >1332:/tmp/xcsSXiOtf.as
+25 cinit CODE >1333:/tmp/xcsSXiOtf.as
+4 intentry CODE >243:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+6 intentry CODE >244:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+8 intentry CODE >245:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+438 text8 CODE >181:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+438 text8 CODE >185:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+43B text8 CODE >186:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+43E text8 CODE >188:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+440 text8 CODE >190:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+444 text8 CODE >191:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+445 text8 CODE >192:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+446 text8 CODE >193:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+447 text8 CODE >195:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+44E text8 CODE >196:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+452 text8 CODE >197:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+456 text8 CODE >199:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+457 text8 CODE >201:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+457 text8 CODE >203:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+459 text8 CODE >205:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+45D text8 CODE >206:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+45E text8 CODE >207:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+467 text8 CODE >212:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+467 text8 CODE >214:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+469 text8 CODE >216:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+471 text8 CODE >217:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+476 text8 CODE >218:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+47A text8 CODE >219:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+47C text8 CODE >220:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+47E text8 CODE >221:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+47F text8 CODE >223:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+481 text8 CODE >227:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+481 text8 CODE >230:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+484 text8 CODE >231:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+485 text8 CODE >233:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4F3 text6 CODE >239:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4F3 text6 CODE >242:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4F5 text6 CODE >243:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4F8 text6 CODE >244:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4FC text6 CODE >245:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+501 text6 CODE >246:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+502 text6 CODE >249:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+503 text6 CODE >250:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4E2 text5 CODE >4:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4E3 text5 CODE >6:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4E4 text5 CODE >43:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4E6 text5 CODE >44:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4EA text5 CODE >45:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4EC text5 CODE >46:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4EE text5 CODE >47:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4F1 text5 CODE >50:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4F2 text5 CODE >51:/Users/UnknownSP/microchip/xc8/v2.31/pic/sources/c90/common/Umul8.c
+4CC text4 CODE >32:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4CD text4 CODE >50:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4CF text4 CODE >51:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D1 text4 CODE >52:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D2 text4 CODE >53:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D4 text4 CODE >54:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D6 text4 CODE >55:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D8 text4 CODE >56:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4D9 text4 CODE >57:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4DA text4 CODE >58:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4DB text4 CODE >59:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4DD text4 CODE >60:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4DE text4 CODE >61:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4E0 text4 CODE >62:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+4E1 text4 CODE >64:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/I2C.c
+2FF text3 CODE >157:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+300 text3 CODE >158:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+304 text3 CODE >161:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+304 text3 CODE >162:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+30B text3 CODE >163:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+30C text3 CODE >164:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+30C text3 CODE >165:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+313 text3 CODE >166:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+314 text3 CODE >167:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+314 text3 CODE >168:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+31B text3 CODE >169:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+31C text3 CODE >170:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+31C text3 CODE >171:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+31D text3 CODE >173:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+31D text3 CODE >174:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+324 text3 CODE >175:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+32B text3 CODE >176:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+332 text3 CODE >177:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+339 text3 CODE >178:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+33A text3 CODE >159:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+350 text3 CODE >181:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+354 text3 CODE >184:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+354 text3 CODE >185:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+35B text3 CODE >186:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+35C text3 CODE >187:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+35C text3 CODE >188:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+363 text3 CODE >189:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+364 text3 CODE >190:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+364 text3 CODE >191:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+36B text3 CODE >192:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+36C text3 CODE >193:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+36C text3 CODE >194:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+373 text3 CODE >195:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+374 text3 CODE >196:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+374 text3 CODE >197:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+37B text3 CODE >198:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+382 text3 CODE >199:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+389 text3 CODE >200:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+390 text3 CODE >201:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+391 text3 CODE >182:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3A7 text3 CODE >204:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+486 text2 CODE >126:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+486 text2 CODE >130:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+489 text2 CODE >133:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+48B text2 CODE >134:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+48C text2 CODE >136:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+48F text2 CODE >137:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+490 text2 CODE >138:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+492 text2 CODE >139:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+494 text2 CODE >140:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+495 text2 CODE >141:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+496 text2 CODE >142:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+497 text2 CODE >143:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+498 text2 CODE >144:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+499 text2 CODE >146:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4A4 text2 CODE >147:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4AF text2 CODE >148:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4BA text2 CODE >149:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4C5 text2 CODE >152:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4C8 text2 CODE >154:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4CB text2 CODE >155:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3A8 text1 CODE >206:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3A9 text1 CODE >207:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3AD text1 CODE >211:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3B9 text1 CODE >214:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3C5 text1 CODE >217:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3D1 text1 CODE >220:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3DD text1 CODE >208:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3F0 text1 CODE >224:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+3F4 text1 CODE >228:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+400 text1 CODE >231:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+40C text1 CODE >234:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+418 text1 CODE >237:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+424 text1 CODE >225:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+437 text1 CODE >241:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 27 maintext CODE >7:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 27 maintext CODE >8:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 28 maintext CODE >9:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-30 maintext CODE >16:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3E maintext CODE >18:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-3F maintext CODE >19:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-40 maintext CODE >20:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-41 maintext CODE >24:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-44 maintext CODE >28:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-4A maintext CODE >29:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-50 maintext CODE >30:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+30 maintext CODE >10:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+38 maintext CODE >17:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+46 maintext CODE >19:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+47 maintext CODE >20:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+48 maintext CODE >21:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+49 maintext CODE >25:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+4C maintext CODE >29:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+52 maintext CODE >30:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
 58 maintext CODE >31:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-5A maintext CODE >32:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-5B maintext CODE >33:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-5C maintext CODE >34:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-5C maintext CODE >35:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-5E maintext CODE >36:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-6A maintext CODE >37:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-78 maintext CODE >41:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-84 maintext CODE >42:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-9C maintext CODE >43:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-AA maintext CODE >44:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-B7 maintext CODE >46:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-C0 maintext CODE >47:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-CD maintext CODE >48:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-DB maintext CODE >35:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-EA maintext CODE >52:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-F4 maintext CODE >53:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-F8 maintext CODE >54:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-FC maintext CODE >55:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-FD maintext CODE >56:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-100 maintext CODE >57:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-102 maintext CODE >58:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-106 maintext CODE >59:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-107 maintext CODE >62:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-10B maintext CODE >63:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-116 maintext CODE >64:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-117 maintext CODE >65:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-118 maintext CODE >66:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-11C maintext CODE >67:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-11D maintext CODE >68:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-11E maintext CODE >71:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-122 maintext CODE >72:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-124 maintext CODE >73:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-155 maintext CODE >74:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-161 maintext CODE >75:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-16E maintext CODE >76:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-175 maintext CODE >77:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-182 maintext CODE >78:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-191 maintext CODE >79:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-19D maintext CODE >81:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1B0 maintext CODE >82:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1BB maintext CODE >83:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1C7 maintext CODE >84:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1D3 maintext CODE >85:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1DF maintext CODE >86:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1E5 maintext CODE >72:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-1F5 maintext CODE >90:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-200 maintext CODE >91:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-20B maintext CODE >92:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-216 maintext CODE >93:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-221 maintext CODE >94:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-224 maintext CODE >95:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-231 maintext CODE >96:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-23E maintext CODE >97:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-24C maintext CODE >94:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
-473 clrtext CODE >1297:/tmp/xcU8ZJQPd.as
-473 clrtext CODE >1298:/tmp/xcU8ZJQPd.as
-474 clrtext CODE >1299:/tmp/xcU8ZJQPd.as
-474 clrtext CODE >1300:/tmp/xcU8ZJQPd.as
-475 clrtext CODE >1301:/tmp/xcU8ZJQPd.as
-476 clrtext CODE >1302:/tmp/xcU8ZJQPd.as
-477 clrtext CODE >1303:/tmp/xcU8ZJQPd.as
-478 clrtext CODE >1304:/tmp/xcU8ZJQPd.as
-46D inittext CODE >1271:/tmp/xcU8ZJQPd.as
-46D inittext CODE >1272:/tmp/xcU8ZJQPd.as
-46E inittext CODE >1273:/tmp/xcU8ZJQPd.as
-46E inittext CODE >1274:/tmp/xcU8ZJQPd.as
-46F inittext CODE >1275:/tmp/xcU8ZJQPd.as
-470 inittext CODE >1276:/tmp/xcU8ZJQPd.as
-471 inittext CODE >1277:/tmp/xcU8ZJQPd.as
-472 inittext CODE >1278:/tmp/xcU8ZJQPd.as
+60 maintext CODE >32:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+62 maintext CODE >33:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+63 maintext CODE >34:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+64 maintext CODE >35:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+64 maintext CODE >36:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+66 maintext CODE >37:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+72 maintext CODE >38:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+80 maintext CODE >42:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+8C maintext CODE >43:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+A4 maintext CODE >44:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+B2 maintext CODE >45:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+BF maintext CODE >47:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+C8 maintext CODE >48:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+D5 maintext CODE >49:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+E3 maintext CODE >36:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+F2 maintext CODE >53:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+FC maintext CODE >54:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+100 maintext CODE >55:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+104 maintext CODE >56:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+105 maintext CODE >57:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+108 maintext CODE >58:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+10A maintext CODE >59:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+10E maintext CODE >60:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+10F maintext CODE >63:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+113 maintext CODE >64:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+11E maintext CODE >65:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+11F maintext CODE >66:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+120 maintext CODE >67:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+124 maintext CODE >68:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+125 maintext CODE >69:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+126 maintext CODE >72:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+12A maintext CODE >73:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+12C maintext CODE >74:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+15D maintext CODE >75:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+169 maintext CODE >76:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+176 maintext CODE >77:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+17D maintext CODE >78:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+18A maintext CODE >79:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+18F maintext CODE >80:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+19E maintext CODE >81:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1AA maintext CODE >83:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1C9 maintext CODE >84:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1D4 maintext CODE >85:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1E0 maintext CODE >86:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1EC maintext CODE >87:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1F8 maintext CODE >88:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+1FF maintext CODE >90:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+212 maintext CODE >91:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+217 maintext CODE >92:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+21C maintext CODE >73:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+22C maintext CODE >96:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+237 maintext CODE >97:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+242 maintext CODE >98:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+24D maintext CODE >99:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+258 maintext CODE >100:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+25B maintext CODE >101:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+268 maintext CODE >102:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+275 maintext CODE >103:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+283 maintext CODE >104:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+288 maintext CODE >105:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+28D maintext CODE >100:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+29C maintext CODE >107:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+29E maintext CODE >108:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+29F maintext CODE >109:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+29F maintext CODE >111:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2A2 maintext CODE >112:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2AF maintext CODE >113:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2BA maintext CODE >114:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2BB maintext CODE >115:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2C7 maintext CODE >117:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2D3 maintext CODE >118:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2E0 maintext CODE >119:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2E1 maintext CODE >120:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+2EF maintext CODE >111:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.c
+516 clrtext CODE >1300:/tmp/xcsSXiOtf.as
+516 clrtext CODE >1301:/tmp/xcsSXiOtf.as
+517 clrtext CODE >1302:/tmp/xcsSXiOtf.as
+517 clrtext CODE >1303:/tmp/xcsSXiOtf.as
+518 clrtext CODE >1304:/tmp/xcsSXiOtf.as
+519 clrtext CODE >1305:/tmp/xcsSXiOtf.as
+51A clrtext CODE >1306:/tmp/xcsSXiOtf.as
+51B clrtext CODE >1307:/tmp/xcsSXiOtf.as
+510 inittext CODE >1274:/tmp/xcsSXiOtf.as
+510 inittext CODE >1275:/tmp/xcsSXiOtf.as
+511 inittext CODE >1276:/tmp/xcsSXiOtf.as
+511 inittext CODE >1277:/tmp/xcsSXiOtf.as
+512 inittext CODE >1278:/tmp/xcsSXiOtf.as
+513 inittext CODE >1279:/tmp/xcsSXiOtf.as
+514 inittext CODE >1280:/tmp/xcsSXiOtf.as
+515 inittext CODE >1281:/tmp/xcsSXiOtf.as
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -390,7 +410,7 @@ FD maintext CODE >56:/Users/UnknownSP/UnknownSP/PIC16f_type1_SPINFEVER/Src/main.
 %SYMTAB
 ___latbits 3 0 ABS 0 - bin/target.obj
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
-__Hspace_0 479 0 ABS 0 - -
+__Hspace_0 51C 0 ABS 0 - -
 __Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -399,18 +419,18 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 -
 input@num 72 0 COMMON 1 cstackCOMMON bin/target.obj
 output@num 72 0 COMMON 1 cstackCOMMON bin/target.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-main@i 36 0 BANK0 1 cstackBANK0 bin/target.obj
+main@i 3A 0 BANK0 1 cstackBANK0 bin/target.obj
 __Hstrings 0 0 ABS 0 strings -
 _HAND 8 0 CODE 0 intentry bin/target.obj
 _PEIE 5E 0 ABS 0 - bin/target.obj
 _Rdtp 78 0 COMMON 1 bssCOMMON bin/target.obj
 _Sdtp 79 0 COMMON 1 bssCOMMON bin/target.obj
 _WPUB 20D 0 ABS 0 - bin/target.obj
-___sp 0 0 STACK 2 stack /tmp/xc6Uw0Qo4.obj
-_init 7C6 0 CODE 0 text2 bin/target.obj
+___sp 0 0 STACK 2 stack /tmp/xc5ffSVXr.obj
+_init 90C 0 CODE 0 text2 bin/target.obj
 _main 4E 0 CODE 0 maintext bin/target.obj
 btemp 7E 0 ABS 0 - bin/target.obj
-start 14 0 CODE 0 init /tmp/xc6Uw0Qo4.obj
+start 14 0 CODE 0 init /tmp/xc5ffSVXr.obj
 __size_of_HAND 0 0 ABS 0 - bin/target.obj
 __size_of_init 0 0 ABS 0 - bin/target.obj
 __size_of_main 0 0 ABS 0 - bin/target.obj
@@ -418,12 +438,12 @@ __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_I2C_init 0 0 ABS 0 - bin/target.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xc6Uw0Qo4.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xc5ffSVXr.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 72 0 COMMON 1 cstackCOMMON bin/target.obj
 wtemp0 7E 0 ABS 0 - bin/target.obj
@@ -431,30 +451,30 @@ __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELA 18C 0 ABS 0 - bin/target.obj
 _ANSELB 18D 0 ABS 0 - bin/target.obj
-_I2C_init 852 0 CODE 0 text4 bin/target.obj
-__end_of___bmul 8A0 0 CODE 0 text5 bin/target.obj
+_I2C_init 998 0 CODE 0 text4 bin/target.obj
+__end_of___bmul 9E6 0 CODE 0 text5 bin/target.obj
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_I2C_init 87E 0 CODE 0 text4 bin/target.obj
+__end_of_I2C_init 9C4 0 CODE 0 text4 bin/target.obj
 ___bmul@multiplier 75 0 COMMON 1 cstackCOMMON bin/target.obj
-_rcv_data 45 0 BANK0 1 bssBANK0 bin/target.obj
-___stackhi 23EF 0 ABS 0 - /tmp/xc6Uw0Qo4.obj
-___stacklo 2039 0 ABS 0 - /tmp/xc6Uw0Qo4.obj
+_rcv_data 4D 0 BANK0 1 bssBANK0 bin/target.obj
+___stackhi 23EF 0 ABS 0 - /tmp/xc5ffSVXr.obj
+___stacklo 2041 0 ABS 0 - /tmp/xc5ffSVXr.obj
 __size_of_input 0 0 ABS 0 - bin/target.obj
-main@com_flg 34 0 BANK0 1 cstackBANK0 bin/target.obj
+main@com_flg 38 0 BANK0 1 cstackBANK0 bin/target.obj
 start_initialization 18 0 CODE 0 cinit bin/target.obj
-_snd_data 3D 0 BANK0 1 bssBANK0 bin/target.obj
+_snd_data 45 0 BANK0 1 bssBANK0 bin/target.obj
 _OSCCON 99 0 ABS 0 - bin/target.obj
 _TRISCbits 8E 0 ABS 0 - bin/target.obj
 main@bumper_enable 26 0 BANK0 1 cstackBANK0 bin/target.obj
-clear_ram0 8E6 0 CODE 0 clrtext bin/target.obj
+clear_ram0 A2C 0 CODE 0 clrtext bin/target.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 bin/target.obj
 _SSPADD 212 0 ABS 0 - bin/target.obj
 _SSPBUF 211 0 ABS 0 - bin/target.obj
 _SSPMSK 213 0 ABS 0 - bin/target.obj
 _rcv_flg 7A 0 COMMON 1 bssCOMMON bin/target.obj
-__end_of_output 60A 0 CODE 0 text3 bin/target.obj
+__end_of_output 750 0 CODE 0 text3 bin/target.obj
 _WDTCON 97 0 ABS 0 - bin/target.obj
-___int_sp 0 0 STACK 2 stack /tmp/xc6Uw0Qo4.obj
+___int_sp 0 0 STACK 2 stack /tmp/xc5ffSVXr.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -466,7 +486,7 @@ __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 4E 0 CODE 0 cinit -
-__end_of_Slave_Interrupt 7C6 0 CODE 0 text8 bin/target.obj
+__end_of_Slave_Interrupt 90C 0 CODE 0 text8 bin/target.obj
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
 __Hsfr12 0 0 ABS 0 sfr12 -
@@ -516,7 +536,7 @@ __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
-_I2C_ReceiveCheck 8A0 0 CODE 0 text6 bin/target.obj
+_I2C_ReceiveCheck 9E6 0 CODE 0 text6 bin/target.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -551,7 +571,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 8DA 0 CODE 0 inittext bin/target.obj
+init_ram A20 0 CODE 0 inittext bin/target.obj
 __Linittext 0 0 ABS 0 inittext -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -581,7 +601,7 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-___bmul 87E 0 CODE 0 text5 bin/target.obj
+___bmul 9C4 0 CODE 0 text5 bin/target.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - bin/target.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -594,29 +614,21 @@ _RA4 64 0 ABS 0 - bin/target.obj
 _RA5 65 0 ABS 0 - bin/target.obj
 _RA6 66 0 ABS 0 - bin/target.obj
 _RA7 67 0 ABS 0 - bin/target.obj
-_RB0 68 0 ABS 0 - bin/target.obj
-_RB2 6A 0 ABS 0 - bin/target.obj
-_RB3 6B 0 ABS 0 - bin/target.obj
-_RB4 6C 0 ABS 0 - bin/target.obj
-_RB5 6D 0 ABS 0 - bin/target.obj
-_RC5 75 0 ABS 0 - bin/target.obj
-_RC6 76 0 ABS 0 - bin/target.obj
-_RC7 77 0 ABS 0 - bin/target.obj
 _SEN 10B0 0 ABS 0 - bin/target.obj
-__S0 479 0 ABS 0 - -
+__S0 51C 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-main@bumper_hit 32 0 BANK0 1 cstackBANK0 bin/target.obj
-_Slave_Interrupt 72A 0 CODE 0 text8 bin/target.obj
+main@bumper_hit 37 0 BANK0 1 cstackBANK0 bin/target.obj
+_Slave_Interrupt 870 0 CODE 0 text8 bin/target.obj
 input@type 76 0 COMMON 1 cstackCOMMON bin/target.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xc6Uw0Qo4.obj
-__pdataBANK0 4D 0 BANK0 1 dataBANK0 bin/target.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xc5ffSVXr.obj
+__pdataBANK0 55 0 BANK0 1 dataBANK0 bin/target.obj
 __size_of___bmul 0 0 ABS 0 - bin/target.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 I2C_init@add 72 0 COMMON 1 cstackCOMMON bin/target.obj
-__end_of_I2C_ReceiveCheck 8C2 0 CODE 0 text6 bin/target.obj
+__end_of_I2C_ReceiveCheck A08 0 CODE 0 text6 bin/target.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -641,18 +653,19 @@ __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
 __pmaintext 4E 0 CODE 0 maintext bin/target.obj
 __Lbigram 0 0 ABS 0 bigram -
-_output 4B8 0 CODE 0 text3 bin/target.obj
+_output 5FE 0 CODE 0 text3 bin/target.obj
 __size_of_I2C_ReceiveCheck 0 0 ABS 0 - bin/target.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Hinittext 0 0 ABS 0 inittext -
-main@F2596 4D 0 BANK0 1 dataBANK0 bin/target.obj
+main@F2598 55 0 BANK0 1 dataBANK0 bin/target.obj
 I2C_ReceiveCheck@ans 72 0 COMMON 1 cstackCOMMON bin/target.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
+main@bumper_on_flag 32 0 BANK0 1 cstackBANK0 bin/target.obj
 __pbssCOMMON 77 0 COMMON 1 bssCOMMON bin/target.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __size_of_Slave_Interrupt 0 0 ABS 0 - bin/target.obj
@@ -667,21 +680,21 @@ __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCON1bits 215 0 ABS 0 - bin/target.obj
 _SSPCON2bits 216 0 ABS 0 - bin/target.obj
-__ptext1 60A 0 CODE 0 text1 bin/target.obj
-__ptext2 7C6 0 CODE 0 text2 bin/target.obj
-__ptext3 4B8 0 CODE 0 text3 bin/target.obj
-__ptext4 852 0 CODE 0 text4 bin/target.obj
-__ptext5 87E 0 CODE 0 text5 bin/target.obj
-__ptext6 8A0 0 CODE 0 text6 bin/target.obj
-__ptext8 72A 0 CODE 0 text8 bin/target.obj
+__ptext1 750 0 CODE 0 text1 bin/target.obj
+__ptext2 90C 0 CODE 0 text2 bin/target.obj
+__ptext3 5FE 0 CODE 0 text3 bin/target.obj
+__ptext4 998 0 CODE 0 text4 bin/target.obj
+__ptext5 9C4 0 CODE 0 text5 bin/target.obj
+__ptext6 9E6 0 CODE 0 text6 bin/target.obj
+__ptext8 870 0 CODE 0 text8 bin/target.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-main@recet_read_bit 35 0 BANK0 1 cstackBANK0 bin/target.obj
+main@recet_read_bit 39 0 BANK0 1 cstackBANK0 bin/target.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization 46 0 CODE 0 cinit bin/target.obj
 __Lfunctab 0 0 ENTRY 0 functab -
-main@game_mode 33 0 BANK0 1 cstackBANK0 bin/target.obj
-__pidataBANK0 8C2 0 CODE 0 idataBANK0 bin/target.obj
+main@game_mode 36 0 BANK0 1 cstackBANK0 bin/target.obj
+__pidataBANK0 A08 0 CODE 0 idataBANK0 bin/target.obj
 ?_input 72 0 COMMON 1 cstackCOMMON bin/target.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON bin/target.obj
@@ -689,24 +702,32 @@ _SSPCON1 215 0 ABS 0 - bin/target.obj
 _SSPSTAT 214 0 ABS 0 - bin/target.obj
 __Hend_init 18 0 CODE 0 end_init -
 __end_of_HAND 14 0 CODE 0 intentry bin/target.obj
-__end_of_init 852 0 CODE 0 text2 bin/target.obj
-__end_of_main 4B8 0 CODE 0 maintext bin/target.obj
+__end_of_init 998 0 CODE 0 text2 bin/target.obj
+__end_of_main 5FE 0 CODE 0 maintext bin/target.obj
 _BCLIE 493 0 ABS 0 - bin/target.obj
 _BCLIF 93 0 ABS 0 - bin/target.obj
-__end_of_input 72A 0 CODE 0 text1 bin/target.obj
+_LATB0 868 0 ABS 0 - bin/target.obj
+_LATB2 86A 0 ABS 0 - bin/target.obj
+_LATB3 86B 0 ABS 0 - bin/target.obj
+_LATB4 86C 0 ABS 0 - bin/target.obj
+_LATB5 86D 0 ABS 0 - bin/target.obj
+_LATC5 875 0 ABS 0 - bin/target.obj
+_LATC6 876 0 ABS 0 - bin/target.obj
+_LATC7 877 0 ABS 0 - bin/target.obj
+__end_of_input 870 0 CODE 0 text1 bin/target.obj
 _SSPIE 48B 0 ABS 0 - bin/target.obj
 _SSPIF 8B 0 ABS 0 - bin/target.obj
 _TRISA 8C 0 ABS 0 - bin/target.obj
 _TRISB 8D 0 ABS 0 - bin/target.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_input 60A 0 CODE 0 text1 bin/target.obj
+_input 750 0 CODE 0 text1 bin/target.obj
 _SSPSTATbits 214 0 ABS 0 - bin/target.obj
 __pintentry 8 0 CODE 0 intentry bin/target.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
 __initialization 18 0 CODE 0 cinit bin/target.obj
 ___bmul@product 74 0 COMMON 1 cstackCOMMON bin/target.obj
-__pbssBANK0 38 0 BANK0 1 bssBANK0 bin/target.obj
+__pbssBANK0 3C 0 BANK0 1 bssBANK0 bin/target.obj
 output@output 74 0 COMMON 1 cstackCOMMON bin/target.obj
 output@type 76 0 COMMON 1 cstackCOMMON bin/target.obj
 # %SPLITSTAB Section
@@ -735,8 +756,8 @@ output@type 76 0 COMMON 1 cstackCOMMON bin/target.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 B 1
-cstackBANK0 1 20 20 39 1
-intentry 0 4 8 475 2
+cstackBANK0 1 20 20 41 1
+intentry 0 4 8 518 2
 reset_vec 0 0 0 2 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

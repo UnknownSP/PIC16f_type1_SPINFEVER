@@ -59,20 +59,20 @@ int input(Input_t type, int num);
 
 #define B1_S_1 RA1
 #define B1_S_2 RA0
-#define B1_OUT RB5
-#define B1_LED RC5
+#define B1_OUT LATB5
+#define B1_LED LATC5
 #define B2_S_1 RA3
 #define B2_S_2 RA2
-#define B2_OUT RB4
-#define B2_LED RC6
+#define B2_OUT LATB4
+#define B2_LED LATC6
 #define B3_S_1 RA5
 #define B3_S_2 RA4
-#define B3_OUT RB3
-#define B3_LED RC7
+#define B3_OUT LATB3
+#define B3_LED LATC7
 #define B4_S_1 RA6
 #define B4_S_2 RA7
-#define B4_OUT RB2
-#define B4_LED RB0
+#define B4_OUT LATB2
+#define B4_LED LATB0
 
 #ifdef	__cplusplus
 }
